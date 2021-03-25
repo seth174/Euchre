@@ -16,7 +16,7 @@ public enum Value
 
     public int getValue()
     {
-        return value;
+        return this.value;
     }
 
 }

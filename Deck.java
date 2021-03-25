@@ -44,4 +44,24 @@ public class Deck
         }
     }
     
+    public void deal(Player dealer, Player two, Player three, Player four)
+    {
+    	Player temp = dealer;
+    	int counter = 0;
+    	for(int i = 0; i < 20; i++)
+    	{
+    		if(i % 3 == 0 && counter <= 12)
+    			temp = temp.getLeft();
+    		else if(i % 2 == 0 && counter > 13)
+    			temp = temp.getLeft();
+    		temp.setCard(deck[i]);
+    		counter = counter + 1;
+    	}
+    }
+    
+    public Card getCard(int index)
+    {
+    	return deck[index];
+    }
+    
 }
